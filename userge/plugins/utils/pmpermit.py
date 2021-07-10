@@ -24,7 +24,7 @@ PMPERMIT_MSG = {}
 pmCounter: Dict[int, int] = {}
 allowAllFilter = filters.create(lambda _, __, ___: Config.ALLOW_ALL_PMS)
 noPmMessage = bk_noPmMessage = (
-    "👋 Hello.\nWelcome to the official support of Werewolf Olympus.\n"
+    "👋 Hello.\nWelcome to Paimon's Assistant. \n"
     "Using /chat you will directly open the chat with an admin."
 )
 blocked_message = bk_blocked_message = "**You were automatically blocked**"
