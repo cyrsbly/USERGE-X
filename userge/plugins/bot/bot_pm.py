@@ -43,8 +43,8 @@ BotAntiFloodFilter = filters.create(lambda _, __, ___: Config.BOT_ANTIFLOOD)
 class FloodConfig:
     BANNED_USERS = filters.user()
     USERS = defaultdict(list)
-    MESSAGES = 3
-    SECONDS = 6
+    MESSAGES = 2
+    SECONDS = 2
     OWNER = filters.user(list(Config.OWNER_ID))
     ALERT = defaultdict(dict)
     AUTOBAN = 10
@@ -181,8 +181,8 @@ if userge.has_bot:
         else:
             start_msg = f"""
 Hello {from_user.fname} 👋
-<b>Welcome to the official support of Werewolf Olympus.</b>
-<i>Created by</i> [Cy](https://t.me/ryscuu255)
+<b>Welcome to Paimon's Bot!<b>
+<i>Created by</i> [Paimon](https://t.me/paimonnn)
 """
             if Config.BOT_FORWARDS:
                 start_msg += "\nYou can 📨 <b>send message</b> here to contact admins of Werewolf Olympus.</b>"
@@ -193,9 +193,9 @@ Hello {from_user.fname} 👋
             )
             btns = [
                 [
-                    InlineKeyboardButton("📩 CONTACT US", url=contact_url),
-                    InlineKeyboardButton("⭐️ FOLLOW", url="https://t.me/OlympusChannel"),
-                    InlineKeyboardButton("🕹 JOIN", url="https://t.me/WerewolfOlympus"),
+                    InlineKeyboardButton("📩 CONTACT", url=contact_url),
+                    InlineKeyboardButton("⭐️ Join Market", url="https://t.me/PaimonMarket"),
+                    InlineKeyboardButton("👤 Promote Links", url="https://t.me/PromoteLinksPH"),
                 ]
             ]
         try:
@@ -257,7 +257,7 @@ Hello {from_user.fname} 👋
             flood_count = FloodConfig.ALERT[user_.id]["count"] = 1
 
         flood_msg = (
-            r"⚠️ <b>\\#Flood_Warning//</b>"
+            r"⚠️ <b> Flood Warning! </b>"
             "\n\n"
             f"  ID: <code>{user_.id}</code>\n"
             f"  Name: {user_.flname}\n"
